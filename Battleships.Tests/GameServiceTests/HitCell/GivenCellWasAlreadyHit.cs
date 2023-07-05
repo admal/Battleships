@@ -1,7 +1,7 @@
-﻿using Battleships.App.Persistance;
-using Battleships.App.Services.Models;
+﻿using Battleships.App.Services.Models;
 using Battleships.App.Services;
 using Battleships.Tests.Helpers;
+using Battleships.App.Persistance.Entities;
 
 namespace Battleships.Tests.GameServiceTests.HitCell;
 

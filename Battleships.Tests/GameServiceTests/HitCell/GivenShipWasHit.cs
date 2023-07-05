@@ -1,4 +1,4 @@
-﻿using Battleships.App.Persistance;
+﻿using Battleships.App.Persistance.Entities;
 using Battleships.App.Services;
 using Battleships.App.Services.Models;
 using Battleships.Tests.Helpers;

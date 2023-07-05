@@ -1,4 +1,5 @@
 ﻿using Battleships.App.Persistance;
+using Battleships.App.Persistance.Entities;
 using Battleships.App.Services.Spawners;
 using System;
 using System.Collections.Generic;

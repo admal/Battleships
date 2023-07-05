@@ -1,4 +1,4 @@
-﻿using Battleships.App.Persistance;
+﻿using Battleships.App.Persistance.Entities;
 
 namespace Battleships.App.Services.Models;
 
