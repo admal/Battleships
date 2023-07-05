@@ -46,7 +46,7 @@ export function Game() {
         <div>
             <h1>Welcome to my app</h1>
             {game !== null &&
-                <Grid sizeX={10} sizeY={10}>
+                <Grid>
                     {cells.map(cell => cell)}
                 </Grid>
             }

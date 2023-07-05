@@ -1,37 +1,35 @@
 ﻿using Battleships.App.Persistance.Entities;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Battleships.App.Persistance
-{
+namespace Battleships.App.Persistance;
 
-    public interface IGameRepository
+public interface IGameRepository
+{
+    Game GetGame(Guid gameGuid);
+    void SaveGame(Game game);
+}
+
+public class GameRepository : IGameRepository
+{
+    private readonly IMemoryCache _memoryCache;
+
+    public GameRepository(IMemoryCache memoryCache)
     {
-        Game GetGame(Guid gameGuid);
-        void SaveGame(Game game);
+        _memoryCache = memoryCache;
     }
 
-    public class GameRepository : IGameRepository
+    public Game GetGame(Guid gameGuid)
     {
-        private readonly IMemoryCache _memoryCache;
-
-        public GameRepository(IMemoryCache memoryCache)
+        if (_memoryCache.TryGetValue(gameGuid, out Game game))
         {
-            _memoryCache = memoryCache;
+            return game;
         }
 
-        public Game GetGame(Guid gameGuid)
-        {
-            if (_memoryCache.TryGetValue(gameGuid, out Game game))
-            {
-                return game;
-            }
+        return null;
+    }
 
-            return null;
-        }
-
-        public void SaveGame(Game game)
-        {
-            _memoryCache.Set(game.GameGuid, game);
-        }
+    public void SaveGame(Game game)
+    {
+        _memoryCache.Set(game.GameGuid, game);
     }
 }

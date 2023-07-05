@@ -1,8 +1,8 @@
 import "./grid.css";
 
-export function GridHeader({ header }) {
+export function GridHeader({ header, className }) {
     return (
-        <div className="grid-header">
+        <div className={`${className} grid-header`}>
             {header}
         </div>
     )

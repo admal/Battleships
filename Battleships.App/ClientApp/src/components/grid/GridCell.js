@@ -35,7 +35,7 @@ export function GridCell({  gameGuid, x, y, onGameFinished, onShipSunk }) {
     }
 
     return (
-        <div className={`grid-cell ${status}`} onClick={hitCell}>
+        <div className={`battlefield grid-cell ${status}`} onClick={hitCell}>
             [{x}, {y}]
         </div>
     );
