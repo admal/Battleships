@@ -36,7 +36,7 @@ export function GridCell({  gameGuid, x, y, onGameFinished, onShipSunk }) {
 
     return (
         <div className={`battlefield grid-cell ${status}`} onClick={hitCell}>
-            [{x}, {y}]
+            {String.fromCharCode('A'.charCodeAt(0) + x)}{y+1}
         </div>
     );
 }
