@@ -37,7 +37,7 @@ public class GivenValidGame : BattleshipsTestFixture
         Assert.That(createdGame.GridHeight, Is.EqualTo(DefaultGridConfiguration.Value.Height));
         Assert.That(createdGame.Cells, Is.Not.Null);
 
-        var shipCells = createdGame.Cells.Values.Where(x => x.ShipName == Carrier).ToList();
+        var shipCells = createdGame.Cells.Values.Where(x => x.ShipName == $"{Carrier} 1").ToList();
         Assert.That(shipCells.Count, Is.EqualTo(CarrierSize));        
     }
 }

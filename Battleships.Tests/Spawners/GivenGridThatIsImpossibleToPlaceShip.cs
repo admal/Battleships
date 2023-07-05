@@ -25,7 +25,7 @@ public class GivenGridThatIsImpossibleToPlaceShip
         game.Cells.Add(new Position(2, 2), new Cell(CellStatus.Ship, "OtherCarrier"));
         game.Cells.Add(new Position(3, 3), new Cell(CellStatus.Ship, "OtherCarrier"));
         game.Cells.Add(new Position(4, 4), new Cell(CellStatus.Ship, "OtherCarrier"));
-        var ship = new Ship { Count = 1, Name = "Carrier", Size = 4 };
+        var ship = new Ship { Count = 1, Name = "Carrier", Size = 5 };
 
         // Act & Assert
         Assert.Throws<ShipSpawningException>(() => _sut.SpawnShip(game, ship).ToList());

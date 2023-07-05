@@ -35,7 +35,8 @@ public class BattleshipsTestFixture
                 new GridConfiguration.Ship
                 {
                     Name = Carrier,
-                    Size = CarrierSize
+                    Size = CarrierSize,
+                    Count = 1
                 }
             }
         });

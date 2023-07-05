@@ -1,5 +1,5 @@
 ﻿using Battleships.App.Configuration;
-using Battleships.App.Persistance;
+using Battleships.App.Persistance.Entities;
 using Battleships.App.Services.Spawners;
 
 namespace Battleships.Tests.Spawners;
