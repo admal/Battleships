@@ -1,0 +1,44 @@
+﻿.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #000;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+}
+.grid-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #808080;
+    border: 1px solid #dedede;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.grid-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dedede;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    aspect-ratio: 1;
+}
+
+.grid-cell.water {
+    background-color: #68d8ed;
+}
+
+.grid-cell.ship-hit {
+    background-color: #ff0000;
+}
+
+grid-cell.missed-hit {
+    background-color: #808080;
+}
