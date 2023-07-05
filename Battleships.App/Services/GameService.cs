@@ -35,10 +35,14 @@ public class GameService : IGameService
         var game = new Game(_gridConfiguration.Width, _gridConfiguration.Height);
         foreach (var ship in _gridConfiguration.ShipsToSpawn)
         {
-            var cells = _shipSpawner.SpawnShip(game, ship).ToList();
-            foreach (var cell in cells)
+            for (int i = 0; i < ship.Count; i++)
             {
-                game.Cells.Add(cell.Postion, cell.Cell);
+                var spawnedCells = _shipSpawner.SpawnShip(game, ship).ToList();
+                foreach (var spawnedCell in spawnedCells)
+                {
+                    spawnedCell.Cell.ShipName = $"{spawnedCell.Cell.ShipName} {i+1}";
+                    game.Cells.Add(spawnedCell.Postion, spawnedCell.Cell);
+                }
             }
         }
 
