@@ -21,7 +21,7 @@ export function GridCell({  gameGuid, x, y, onGameFinished, onShipSunk }) {
         if (result.hitResult === 0) {
             setStatus("ship-hit");
         } else {
-            setStatus("ship-missed")
+            setStatus("missed-hit")
         }
 
         if (result.shipSunk) {

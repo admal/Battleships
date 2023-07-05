@@ -9,16 +9,6 @@
     margin: 0 auto;
 }
 
-.grid-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #808080;
-    border: 1px solid #dedede;
-    width: 100%;
-    height: 100%;
-}
-
 .grid-cell {
     display: flex;
     align-items: center;
@@ -38,6 +28,7 @@
     background-color: #ff0000;
 }
 
-grid-cell.missed-hit {
+.grid-cell.missed-hit {
     background-color: #808080;
+    color: #dedede;
 }
